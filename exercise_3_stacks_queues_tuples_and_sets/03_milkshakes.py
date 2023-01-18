@@ -23,7 +23,6 @@
 #   Constraints
 #   •	All given numbers will be valid integers in the range [-100 … 100].
 
-
 from collections import deque
 
 chocolates = [int(x) for x in input().split(", ")]
@@ -50,7 +49,6 @@ while chocolates and cups_of_milk:
     else:
         cups_of_milk.append(current_cup)
         chocolates.append(current_chocolate - 5)
-
 
 if milkshakes < 5:
     print("Not enough milkshakes.")
