@@ -82,6 +82,8 @@ for command in commands:
                         bunnies_positions.append((br, bc))
 
     for bunny in bunnies_positions:
+        if bunny_lair[bunny[0]][bunny[1]] == "P":
+            player_dead = True
         bunny_lair[bunny[0]][bunny[1]] = "B"
 
     if player_dead:
