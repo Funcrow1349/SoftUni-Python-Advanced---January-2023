@@ -11,3 +11,4 @@ def recursive_power(x, y):
 
 print(recursive_power(2, 10))
 print(recursive_power(10, 100))
+print(recursive_power(5, 15))

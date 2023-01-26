@@ -8,3 +8,4 @@ def get_info(name, age, town):
 
 
 print(get_info(**{"name": "George", "town": "Sofia", "age": 20}))
+print(get_info(**{"name": "Koko", "town": "Dimitrovgrad", "age": 2}))

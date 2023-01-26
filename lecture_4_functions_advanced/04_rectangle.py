@@ -23,7 +23,6 @@ def rectangle(length, width):
 
 
 print(rectangle(2, 10))
+print(rectangle('2', 10))
 
-# Additional test inputs:
-# print(rectangle('2', 10))
 
