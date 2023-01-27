@@ -36,8 +36,8 @@ def math_operations(*numbers, **operations):
 
     sorted_operations = sorted(operations.items(), key=lambda x: (-x[1], x[0]))
     result = []
-    for o in sorted_operations:
-        result.append(f"{o[0]}: {o[1]:.1f}")
+    for el in sorted_operations:
+        result.append(f"{el[0]}: {el[1]:.1f}")
     return '\n'.join(result)
 
 
