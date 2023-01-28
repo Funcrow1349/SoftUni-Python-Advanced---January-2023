@@ -68,21 +68,20 @@ while mines_hit < 3 and cruisers_destroyed < 3:
     battlefield[submarine_position[0]][submarine_position[1]] = "-"
     submarine_position = [row, col]
 
-    if battlefield[row][col] == "-":
-        battlefield[row][col] = "S"
-        continue
-    elif battlefield[row][col] == "C":
-        battlefield[row][col] = "S"
+    if battlefield[row][col] == "C":
         cruisers_destroyed += 1
-        if cruisers_destroyed == 3:
-            print("Mission accomplished, U-9 has destroyed all battle cruisers of the enemy!")
-            break
+
     elif battlefield[row][col] == "*":
-        battlefield[row][col] = "S"
         mines_hit += 1
-        if mines_hit == 3:
-            print(f"Mission failed, U-9 disappeared! Last known coordinates [{row}, {col}]!")
-            break
+
+    battlefield[row][col] = "S"
+
+if mines_hit == 3:
+    print(f"Mission failed, U-9 disappeared! Last known coordinates [{submarine_position[0]}, {submarine_position[1]}]!")
+
+elif cruisers_destroyed == 3:
+    print("Mission accomplished, U-9 has destroyed all battle cruisers of the enemy!")
+
 
 for row in battlefield:
     print(*row, sep="")
