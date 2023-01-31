@@ -40,7 +40,7 @@ while True:
         raise NameTooShortError(f"Name must be more than {MIN_NAME_LENGTH} characters")
 
     elif domain not in valid_domains:
-        raise InvalidDomainError("Domain must be one of the folowing: .com, .bg, .org, .net")
+        raise InvalidDomainError("Domain must be one of the following: .com, .bg, .org, .net")
 
     else:
         print(f"Email {email_to_validate} is valid")
